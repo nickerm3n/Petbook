@@ -13,10 +13,16 @@
 		height: 65px;
 		background: url('../images/topWaves.png') no-repeat top center;
 		background-size: cover;
-		
+
 		@media (min-width: $width-md) {
 			background: url('../images/topWaves2.png') no-repeat top center;
 			height: 150px;
+		}
+		@media (min-width: $iphone6-landscape) {
+			height: 110px;
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+
 		}
 	}
 }
@@ -25,6 +31,11 @@
 .header {
 	display: flex;
 	justify-content: space-around;
+
+	@media (min-width: $iphone6-landscape) {
+		position: absolute;
+		top: 0;
+	}
 	
 	&__logo {
 		padding-top: 35px;
@@ -43,10 +54,14 @@
 		height: 60px;
 		border-radius: 50%;
 		background: linear-gradient(to right, rgba(214,148,113,1) 0%,rgba(126,64,31,1) 100%);
+		@media (min-width: $iphone6-landscape) {
+			order: 1;
+
+		}
 	}
 
 	&__add-advert {
-		@include pos($b:50px);
+		@include pos($b:150px);
 		width: 345px;
 		height: 50px;
 		background: linear-gradient(270deg, #7E401F 0%, #D69471 100%);
@@ -54,6 +69,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@media (min-height: 666px) {
+			@include pos($b: 20px);
+		}
+
+		@media (min-width: $iphone6-landscape) {
+			position: static;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+		}
 	}
 }
 
@@ -62,21 +88,37 @@
 	margin-top: 45px;
 	display: flex;
 	justify-content: center;
+
+	@media (min-width: $iphone6-landscape) {
+		margin-top: 10px;
+	}
 	
 	&-menu {
 		display: flex;
 		justify-content: space-between;
 	    width: 85%;
 		flex-wrap: wrap;
-		
-		&__item {
-			@include size(80px);
-			border: 1px solid;
-			border-radius: 8px;
-			margin-bottom: 37px;
-			position: relative;
+
+		@media (min-width: $iphone6-landscape) {
+			justify-content: center;
+			width: 50%;
 		}
 
+		&__item {
+			@include size(80px);
+			border-radius: 8px;
+			margin-bottom: 50px;
+			position: relative;
+			@media (min-width: $iphone6-landscape) {
+				@include size(45px);
+				margin: 0 25px 40px 25px;
+			}
+		}
+		&__img {
+			@media (min-width: $iphone6-landscape) {
+				@include size(35px);
+			}
+		}
 		&__link {
 			position: relative;
 			background: red;
@@ -89,6 +131,32 @@
 			justify-content: center;
 			align-items: center;
 		}
+			&__subtitle {
+			position: absolute;	
+			bottom: -23px;
+			text-align: center;
+			width: 100%;
+			@media (min-width: $iphone6-landscape) {
+				width: 200%;
+				left: -50%;
+				bottom: -20px;
+			}
+
+		}
+		&__item:nth-child(6) &__subtitle {
+			bottom: -35px;
+			@media (min-width: $iphone6-landscape) {
+				bottom: -33px;
+			}
+		}
+		&__item:nth-child(9) &__subtitle {
+			left: -15px;
+				@media (min-width: $iphone6-landscape) {
+				left: -33px;
+			}
+		}
+
+
 	}
 }
 
@@ -100,7 +168,7 @@
 	left: -5px;
 	animation: drift linear infinite;
 	transform-origin: 50% 48%;
-	border-radius: 43%;
+	border-radius: 38%;
 	filter: opacity(0.4);
 }
 
@@ -135,64 +203,7 @@
 
 
 
-// .top-waves {
-// 	height: 65px;
-// 	border: 1px solid;
-// }
 
-// .top-wave {
-// 	display: inline-block;
-// 	position: absolute;
-// }
-
-// .top-wave:nth-of-type(1) {
-// 	top: 0;
-// 	z-index: 3;
-// }
-
-// .top-wave:nth-of-type(2) {
-// 	top: 0px;
-// 	z-index: 2;
-// }
-
-// .top-wave:nth-of-type(3) {
-// 	top: 5px;
-// }
-
-
-// .waves {
-// 	position: relative;
-// 	height: 300px;
-// 	overflow: hidden;
-// }
-
-// .wave {
-// 	@include pos($t:0, $l:0);
-// 	height: 300px;
-// 	width: 300px;
-// 	border-radius: 43%;
-// 	filter: opacity(0.4);
-// 	animation: drift linear infinite;
-// 	transform-origin: 50% 48%;
-// }
-
-
-// .wave:nth-of-type(1) {
-// 	animation-duration: 5s;
-// 	background: linear-gradient(to right, rgba(214,148,113,1) 1%,rgba(126,64,31,1) 100%);
-// }
-
-// .wave:nth-of-type(2) {
-// 	animation-duration: 7s;
-// 	background: linear-gradient(to right, rgba(214,148,113,1) 1%,rgba(206,84,20,1) 100%);
-// }
-
-// .wave:nth-of-type(3) {
-// 	animation-duration: 9s;
-// 	background-color: orangered;
-// 	filter: opacity(0.1);
-// 	background: linear-gradient(to right, rgba(255,210,186,1) 1%,rgba(238,118,54,1) 100%);
-// }
 
 @keyframes drift {
 	from {

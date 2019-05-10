@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+body {
+	font: 400 1rem $comfortaa;
+}

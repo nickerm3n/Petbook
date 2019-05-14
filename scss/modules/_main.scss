@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	background: $cream;
 	position: relative;
+	overflow: hidden;
 	
 	&::before {
 		content: '';
@@ -17,13 +18,36 @@
 		@media (min-width: $width-md) {
 			background: url('../images/topWaves2.png') no-repeat top center;
 			height: 150px;
+			width: 75%;
+		    margin-left: auto;
+		    position: absolute;
+		    right: 0;
 		}
+
+
 		@media (min-width: $iphone6-landscape) {
 			height: 110px;
 			background: url('../images/topWaves2.png') no-repeat top center;
 			background-size: cover;
 
+
 		}
+
+		@media (max-height: 375px) {
+			height: 110px;
+			width: 100%;
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+
+		}
+
+		@media (max-height: 667px) and (max-width: 375px) {
+			height: 50px;
+			width: 100%;
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+		}	
+
 	}
 }
 
@@ -31,18 +55,26 @@
 .header {
 	display: flex;
 	justify-content: space-around;
+	width: 100%;
 
 	@media (min-width: $iphone6-landscape) {
 		position: absolute;
-		top: 0;
+		top: 10px;
+		width: 75%;
+    	right: 0;
 	}
 	
 	&__logo {
 		padding-top: 35px;
+		@media (min-width: $iphone6-landscape) {
+			padding-top: 10px;
+		}
 	}
 
-	&__profile, &__add-advert {
-		
+	&__wrapper {
+		@media (min-width: $iphone6-landscape) {
+			display: flex;
+		}
 	}
 
 	&__profile {
@@ -56,7 +88,7 @@
 		background: linear-gradient(to right, rgba(214,148,113,1) 0%,rgba(126,64,31,1) 100%);
 		@media (min-width: $iphone6-landscape) {
 			order: 1;
-
+			margin-left: 35px;
 		}
 	}
 
@@ -71,7 +103,8 @@
 		align-items: center;
 
 		@media (min-height: 666px) {
-			@include pos($b: 20px);
+			@include pos($b: 20px, $l:50%);
+			transform: translateX(-50%);
 		}
 
 		@media (min-width: $iphone6-landscape) {
@@ -84,13 +117,64 @@
 }
 
 
+.dog-image {
+	display: none;
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+	@media (min-width: 667px) and (max-width: 1742px) {
+		display: block;
+		align-self: flex-end;
+	}
+
+	@media (max-height: 375px) {
+		display: none;
+	}
+}
+
 .navigation {
-	margin-top: 45px;
+	margin-top: 50px;
 	display: flex;
 	justify-content: center;
 
-	@media (min-width: $iphone6-landscape) {
+	@media (min-width: 667px) {
 		margin-top: 10px;
+
+	}
+
+	@media (min-width: 736px) {
+
+		.navigation-menu {
+			background: #fff;
+		}
+	}
+
+	@media (min-width: 768px), (max-height: 375px)  {
+		margin-top: 0;
+	}
+
+	@media (min-width: 812px) {
+		margin-top: 120px;
+		
+		.navigation-menu {
+			background: transparent;
+		}
+	}
+
+	
+	@media (min-width: 813px), (min-width: 992px), (min-height: 992px) {
+		margin-top: 0;
+		justify-content: space-between;
+		height: 100%;
+		
+		
+		.navigation-menu {
+			background: #fff;
+			align-items: center;
+		}
 	}
 	
 	&-menu {
@@ -98,21 +182,36 @@
 		justify-content: space-between;
 	    width: 85%;
 		flex-wrap: wrap;
+		background: transparent;
 
-		@media (min-width: $iphone6-landscape) {
+		@media (min-width: 667px), (min-height: 1024px)  {
 			justify-content: center;
+			width: 25%;
+			flex-direction: column;
+			// background: #fff;
+			// background: transparent;
+		}
+
+		@media (max-height: 375px), (max-height: 414px)  {
+			justify-content: center;
+			flex-direction: row;
 			width: 50%;
 		}
+
 
 		&__item {
 			@include size(80px);
 			border-radius: 8px;
 			margin-bottom: 50px;
 			position: relative;
+			color: #000;
+			
 			@media (min-width: $iphone6-landscape) {
 				@include size(45px);
 				margin: 0 25px 40px 25px;
 			}
+
+
 		}
 		&__img {
 			@media (min-width: $iphone6-landscape) {
@@ -191,14 +290,6 @@
 	z-index: 1;
 	animation-duration: 9s;
 }
-
-
-
-
-
-
-
-
 
 
 

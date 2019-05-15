@@ -16,37 +16,35 @@
 		background-size: cover;
 
 		@media (min-width: $width-md) {
+			@include pos($r:0);
 			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
 			height: 150px;
 			width: 75%;
-		    margin-left: auto;
-		    position: absolute;
-		    right: 0;
 		}
 
+		@media (orientation: landscape), (min-width: 396px) {
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+		}
 
 		@media (min-width: $iphone6-landscape) {
-			height: 110px;
-			background: url('../images/topWaves2.png') no-repeat top center;
-			background-size: cover;
-
-
+			height: 110px;			
 		}
 
-		@media (max-height: 375px) {
-			height: 110px;
+		@media (min-width: 812px) and (orientation: landscape) and (max-height: 375px) {
 			width: 100%;
-			background: url('../images/topWaves2.png') no-repeat top center;
-			background-size: cover;
-
 		}
 
 		@media (max-height: 667px) and (max-width: 375px) {
 			height: 50px;
-			width: 100%;
 			background: url('../images/topWaves2.png') no-repeat top center;
 			background-size: cover;
 		}	
+
+		@media (min-width: 1105px) {
+			height: 142px;
+		}
 
 	}
 }
@@ -61,11 +59,12 @@
 		position: absolute;
 		top: 10px;
 		width: 75%;
-    	right: 0;
+		right: 0;
 	}
 	
 	&__logo {
 		padding-top: 35px;
+		
 		@media (min-width: $iphone6-landscape) {
 			padding-top: 10px;
 		}
@@ -156,7 +155,7 @@
 		margin-top: 0;
 	}
 
-	@media (min-width: 812px) {
+	@media (min-width: 812px) and (orientation: landscape) {
 		margin-top: 120px;
 		
 		.navigation-menu {
@@ -180,22 +179,24 @@
 	&-menu {
 		display: flex;
 		justify-content: space-between;
-	    width: 85%;
+		width: 85%;
 		flex-wrap: wrap;
 		background: transparent;
+		
 
 		@media (min-width: 667px), (min-height: 1024px)  {
 			justify-content: center;
 			width: 25%;
 			flex-direction: column;
-			// background: #fff;
-			// background: transparent;
+			border-right: 2px solid $brown;
+
 		}
 
 		@media (max-height: 375px), (max-height: 414px)  {
 			justify-content: center;
 			flex-direction: row;
 			width: 50%;
+			border: 2px solid transparent;
 		}
 
 
@@ -211,13 +212,20 @@
 				margin: 0 25px 40px 25px;
 			}
 
+			@media (min-width: $width-md) {
+				// @include size(65px);
+				// margin-left:0;
+			}
+
 
 		}
+
 		&__img {
 			@media (min-width: $iphone6-landscape) {
 				@include size(35px);
 			}
 		}
+
 		&__link {
 			position: relative;
 			background: red;
@@ -230,18 +238,26 @@
 			justify-content: center;
 			align-items: center;
 		}
-			&__subtitle {
+		&__subtitle {
 			position: absolute;	
 			bottom: -23px;
 			text-align: center;
 			width: 100%;
+			
 			@media (min-width: $iphone6-landscape) {
 				width: 200%;
 				left: -50%;
 				bottom: -20px;
 			}
 
+			// @media (min-width: $width-md) {
+			// 	width: 200%;
+			// 	right: -50px;
+			// 	top: 0;
+			// }
+
 		}
+
 		&__item:nth-child(6) &__subtitle {
 			bottom: -35px;
 			@media (min-width: $iphone6-landscape) {
@@ -250,7 +266,7 @@
 		}
 		&__item:nth-child(9) &__subtitle {
 			left: -15px;
-				@media (min-width: $iphone6-landscape) {
+			@media (min-width: $iphone6-landscape) {
 				left: -33px;
 			}
 		}

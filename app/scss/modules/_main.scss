@@ -118,11 +118,10 @@
 
 .dog-image {
 	display: none;
+	position: relative;
+	z-index:2;
 	
-	img {
-		width: 100%;
-		height: auto;
-	}
+
 	
 	@media (min-width: 667px) and (max-width: 1742px) {
 		display: block;
@@ -131,6 +130,18 @@
 
 	@media (max-height: 375px) {
 		display: none;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	p {
+		@include pos($l:-45%, $t:150px);
+		width: 50%;
+		font-size: 22px;
+		line-height: 25px;
 	}
 }
 
@@ -141,11 +152,9 @@
 
 	@media (min-width: 667px) {
 		margin-top: 10px;
-
 	}
 
 	@media (min-width: 736px) {
-
 		.navigation-menu {
 			background: #fff;
 		}
@@ -172,7 +181,10 @@
 		
 		.navigation-menu {
 			background: #fff;
-			align-items: center;
+			align-items: flex-start;
+			justify-content: flex-start;
+    		padding-top: 30px;
+    		flex-wrap: nowrap;
 		}
 	}
 	
@@ -184,7 +196,7 @@
 		background: transparent;
 		
 
-		@media (min-width: 667px), (min-height: 1024px)  {
+		@media (min-width: $width-md), (min-height: 1024px)  {
 			justify-content: center;
 			width: 25%;
 			flex-direction: column;
@@ -197,6 +209,8 @@
 			flex-direction: row;
 			width: 50%;
 			border: 2px solid transparent;
+			
+
 		}
 
 
@@ -212,11 +226,13 @@
 				margin: 0 25px 40px 25px;
 			}
 
-			@media (min-width: $width-md) {
-				// @include size(65px);
-				// margin-left:0;
+			@media (min-height: 1024px), (min-width: 1024px) {
+				@include size(60px);
+				
+				.navigation-menu__subtitle {
+					transform: translateX(80px) translateY(-30px);
+				}
 			}
-
 
 		}
 
@@ -228,7 +244,6 @@
 
 		&__link {
 			position: relative;
-			background: red;
 			background: linear-gradient(270deg, #7E401F 0%, #D69471 100%);
 			width: 100%;
 			height: 100%;
@@ -238,25 +253,51 @@
 			justify-content: center;
 			align-items: center;
 		}
+
 		&__subtitle {
-			position: absolute;	
-			bottom: -23px;
+			@include pos($b:-23px);
 			text-align: center;
 			width: 100%;
-			
-			@media (min-width: $iphone6-landscape) {
+
+			@media (min-width: $iphone6-landscape), (min-width: 812px) and (orientation: landscape) {
+				@include pos($l:-50%, $b:-20px);
+				transform: none;
+				text-align: center;
 				width: 200%;
-				left: -50%;
-				bottom: -20px;
 			}
 
-			// @media (min-width: $width-md) {
-			// 	width: 200%;
-			// 	right: -50px;
-			// 	top: 0;
-			// }
-
+			@media (min-width: $width-md) {
+				width: 230%;
+				position: static;
+				transform: translateX(60px) translateY(-30px);
+				text-align: left;
+			}
 		}
+
+
+		&__item:nth-child(5), &__item:nth-child(8) {
+			@media (min-width: $width-md) {
+				@include pos($b:0);
+				
+				.navigation-menu__subtitle {
+					display: none;
+				}
+			}
+		}
+
+		&__item:nth-child(5) {
+			@media (min-width: $width-md) {
+				left: 0;		
+			}
+		}
+
+
+		&__item:nth-child(8) {
+			@media (min-width: $width-md) {
+				left: 80px;	
+			}
+		}
+
 
 		&__item:nth-child(6) &__subtitle {
 			bottom: -35px;
@@ -306,9 +347,6 @@
 	z-index: 1;
 	animation-duration: 9s;
 }
-
-
-
 
 
 

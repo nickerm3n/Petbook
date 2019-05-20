@@ -7,6 +7,7 @@
 	background: $cream;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 0 10px 10px rgba(0,0,0,.4);
 	
 	&::before {
 		content: '';
@@ -119,9 +120,6 @@
 .dog-image {
 	display: none;
 	position: relative;
-	z-index:2;
-	
-
 	
 	@media (min-width: 667px) and (max-width: 1742px) {
 		display: block;
@@ -132,18 +130,40 @@
 		display: none;
 	}
 
+	@media (min-width:$width-md),(min-width: 1024px) {
+		width: 70%;
+	}
+
+	@media (min-width: 1024px) {
+		width: 40%;
+	}
+
+
+
 	img {
 		width: 100%;
 		height: auto;
 	}
 
 	p {
-		@include pos($l:-45%, $t:150px);
-		width: 50%;
-		font-size: 22px;
-		line-height: 25px;
+		width: 87%;
+		@include pos($l:-80%, $t:-200px);
+		display: block;
+		
+		@media (min-width: $width-md) {
+			display:none;
+		}
+
+		@media (min-width: 1024px) {	
+			@include pos($l:-55%, $t:150px);
+			display: block;
+			width: 50%;
+			font-size: 22px;
+			line-height: 25px;
+		}
 	}
 }
+
 
 .navigation {
 	margin-top: 50px;
@@ -155,6 +175,7 @@
 	}
 
 	@media (min-width: 736px) {
+		justify-content:space-between;
 		.navigation-menu {
 			background: #fff;
 		}
@@ -183,8 +204,8 @@
 			background: #fff;
 			align-items: flex-start;
 			justify-content: flex-start;
-    		padding-top: 30px;
-    		flex-wrap: nowrap;
+			padding-top: 30px;
+			flex-wrap: nowrap;
 		}
 	}
 	

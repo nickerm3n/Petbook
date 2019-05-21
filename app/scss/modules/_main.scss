@@ -15,6 +15,15 @@
 		height: 65px;
 		background: url('../images/topWaves.png') no-repeat top center;
 		background-size: cover;
+		
+		@media (min-width: 495px) {
+			background: url('../images/topWaves2.png') no-repeat top center;
+			height: 80px;
+		}
+
+		@media (min-width: 634px) {
+			height: 85px;
+		}
 
 		@media (min-width: $width-md) {
 			@include pos($r:0);
@@ -121,24 +130,19 @@
 	display: none;
 	position: relative;
 	
-	@media (min-width: 667px) and (max-width: 1742px) {
+	@media (min-width: $width-md) and (max-width: 1742px) {
 		display: block;
 		align-self: flex-end;
+		width: 45%;
 	}
 
 	@media (max-height: 375px) {
 		display: none;
 	}
 
-	@media (min-width:$width-md),(min-width: 1024px) {
-		width: 70%;
-	}
-
 	@media (min-width: 1024px) {
 		width: 40%;
 	}
-
-
 
 	img {
 		width: 100%;
@@ -146,21 +150,28 @@
 	}
 
 	p {
-		width: 87%;
-		@include pos($l:-80%, $t:-200px);
+		@include pos($l:-80%, $t:0);
 		display: block;
+		width: 87%;
+		padding: 10px;
+		border-radius: 8px;
+		background: rgba(0,0,0,.2);
+		line-height: 25px;
+		font-size: 16px;
+		
 		
 		@media (min-width: $width-md) {
-			display:none;
+			@include pos($l:-55%, $t:-100px);
+			width: 45%;
 		}
 
-		@media (min-width: 1024px) {	
-			@include pos($l:-55%, $t:150px);
+		@media (min-width: 1350px) {	
+			@include pos($l:-65%, $t:50px);
 			display: block;
 			width: 50%;
 			font-size: 22px;
-			line-height: 25px;
 		}
+
 	}
 }
 
@@ -194,7 +205,7 @@
 	}
 
 	
-	@media (min-width: 813px), (min-width: 992px), (min-height: 992px) {
+	@media (min-width: $width-md), (min-width: 813px), (min-width: 992px), (min-height: 992px) {
 		margin-top: 0;
 		justify-content: space-between;
 		height: 100%;
@@ -215,6 +226,7 @@
 		width: 85%;
 		flex-wrap: wrap;
 		background: transparent;
+		padding-left: 0;
 		
 
 		@media (min-width: $width-md), (min-height: 1024px)  {
@@ -230,9 +242,12 @@
 			flex-direction: row;
 			width: 50%;
 			border: 2px solid transparent;
-			
-
 		}
+
+		@media (min-width: 1350px) {
+			padding-left: 50px;
+		}
+
 
 
 		&__item {
@@ -249,10 +264,10 @@
 
 			@media (min-height: 1024px), (min-width: 1024px) {
 				@include size(60px);
-				
-				.navigation-menu__subtitle {
-					transform: translateX(80px) translateY(-30px);
-				}
+			}
+
+			@media (min-width: 1350px) {
+				@include size(80px);
 			}
 
 		}
@@ -260,6 +275,10 @@
 		&__img {
 			@media (min-width: $iphone6-landscape) {
 				@include size(35px);
+			}
+
+			@media (min-width: 1350px) {
+				@include size(100%);
 			}
 		}
 
@@ -293,6 +312,14 @@
 				transform: translateX(60px) translateY(-30px);
 				text-align: left;
 			}
+
+			@media (min-height: 1024px), (min-width: 1024px) {
+				transform: translateX(80px) translateY(-30px);
+			}
+
+			@media (min-width: 1350px) {
+				transform: translateX(100px) translateY(-45px);
+			}
 		}
 
 
@@ -304,19 +331,43 @@
 					display: none;
 				}
 			}
+
 		}
 
 		&__item:nth-child(5) {
 			@media (min-width: $width-md) {
 				left: 0;		
 			}
+
+			@media (min-width: 1350px) {
+				left: 50px;
+			}
 		}
+
+
+
+		&__item:nth-child(7) {
+			@media (min-height: 816px) {
+				display: none;
+			}
+
+			@media (min-height: 768px) and (min-width: 1024px) {
+				display: none;
+			}	
+		}
+
 
 
 		&__item:nth-child(8) {
 			@media (min-width: $width-md) {
 				left: 80px;	
 			}
+
+			@media (min-width: 1350px) {
+				left: 160px;	
+			}
+
+
 		}
 
 

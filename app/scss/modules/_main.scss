@@ -132,14 +132,14 @@
  .dog-image {
  	display: none;
  	position: relative;
-	
+
  	@media (min-width: $width-md) and (max-width: 1742px) {
  		display: block;
  		align-self: flex-end;
  		width: 45%;
  	}
 
- 	@media (min-width: 1024px) {
+ 	@media (min-width: $ipad-height) {
  		width: 40%;
  	}
 
@@ -163,7 +163,7 @@
  		display: none;
  	}
 
- 	 @media (min-width: $pc-width) {
+ 	@media (min-width: $pc-width) {
  		display: block;
  		align-self: flex-end;
  	}
@@ -173,98 +173,86 @@
  		height: auto;
  	}
 
- 	&__text {
- 		@include pos($l:-80%, $t:0);
- 		display: block;
- 		width: 87%;
- 		padding: 10px;
-		line-height: 25px;
-		
-		
-	
 
-		@media (min-width: $width-md) {
-			@include pos($l:-20%, $t:-105%);
-			width: 90%;
-			font-size: 2rem;
-			line-height: 2.5rem;
-			
-		}
-
-		@media (min-height: $width-md) and (orientation: landscape) {
-			@include pos($l:-80%, $t:-35%);
-			width: 90%;
-			font-size: 2rem;
-			line-height: 2.5rem;
-		}
-
-		@media (min-height: $pro-height) {
-			@include pos($l:-35%, $t:-110%);
-			width: 130%;
-			font-size: 3rem;
-			line-height: 3.2rem;			
-		}
-
-		@media (min-width: $pro-height)  {
-			@include pos($l:-20%, $t:-37%);
-			width: 90%;
-			font-size: 2rem;
-			line-height: 2.5rem;			
-		}
-
-	 	 @media (min-width: $pc-width) {
-	 		@include pos($l:-60%, $t:0);
-	 		@include size(60%);
-	 		background: rgba(0, 0, 0, .1);
-	 		border-radius: 8px;
-	 	}
-
-	}
-}
+ }
 
 
 
 
-.navigation {
-	margin-top: 50px;
-	display: flex;
-	justify-content: center;
+ .navigation {
+ 	margin-top: 50px;
+ 	display: flex;
+ 	justify-content: center;
+ 	position: relative;
 
-	@media (min-width: 667px) {
-		margin-top: 10px;
-	}
+ 	@media (min-width: 667px) {
+ 		margin-top: 10px;
+ 	}
 
-	@media (min-width: 768px), (max-height: 375px)  {
-		margin-top: 0;
-	}
+ 	@media (min-width: 768px), (max-height: 375px)  {
+ 		margin-top: 0;
+ 	}
 
-	@media (min-width: 812px) and (orientation: landscape) {
-		margin-top: 65px;
-	}
+ 	@media (min-width: 812px) and (orientation: landscape) {
+ 		margin-top: 65px;
+ 	}
 
-	@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px)  {
-		justify-content: center;
-	}
+ 	@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px)  {
+ 		justify-content: center;
+ 	}
 
-	@media (min-width: $iphonex-landscape+21px) {
-		margin-top: 0;
-		justify-content: space-between;
-		min-height: 100vh;	
-	}
+ 	@media (min-width: $iphonex-landscape+21px) {
+ 		margin-top: 0;
+ 		justify-content: space-between;
+ 		height: 100vh;
+ 	}
+ 	@media (min-width: $width-md) and (min-height: $width-md) {
+ 		justify-content: space-between;
+ 	}
 
-	@media (min-width: $width-md) and (min-height: 1024px) {
-			justify-content: space-between;
-			min-height: 100vh;
-	}
-	
-	&-menu {
-		display: flex;
-		justify-content: space-between;
-		width: 77%;
-		flex-wrap: wrap;
-		background: transparent;
-		padding-left: 0;
-		
+ 	@media (min-width: $width-md) and (min-height: $ipad-height) {
+ 		justify-content: space-between;
+ 		min-height: 100vh;
+ 	}
+ 	&__info {
+ 		@include pos($l:48%, $t:20%);
+ 		
+ 		display: none;
+ 		@media (min-width: $width-md) {
+ 			display: block;
+ 			width: 40%;
+ 			font-size: 2rem;
+ 		}
+ 		@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
+ 			display: none;
+ 		}
+ 		@media (min-width:  $ipad-height) {
+ 			@include pos($l:38%, $t:20%);
+ 		}
+
+ 		@media (min-width: $ipad-height) and (min-height: $pro-height) {
+ 			font-size: 2.7rem;
+ 			@include pos($l:45%, $t:20%);
+ 		}
+ 		@media (min-width: $pro-height) and (min-height: $ipad-height){
+ 			font-size: 2.5rem;
+ 			width: 27%;
+ 			@include pos($l:35%, $t:20%);
+ 		}
+ 		@media (min-width: $pro-height +1px) {
+ 			width: 26%;
+ 		}
+ 	}
+
+
+ 	&-menu {
+ 		display: flex;
+ 		justify-content: space-between;
+ 		width: 77%;
+ 		flex-wrap: wrap;
+ 		background: transparent;
+ 		padding-left: 0;
+
 		//  media for nav menu
 		@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
 
@@ -274,8 +262,9 @@
 			background: #fff;
 			font-size: 1.7rem;
 		}
-		@media (min-width: $width-md) and (min-height: 1024px) {
+		@media (min-width: $width-md) and (min-height: $width-md) {
 			background: #fff;
+
 		}
 
 
@@ -284,7 +273,7 @@
 			width: 64%;
 		}
 
-		@media (min-width: $width-md) and (max-width: $pro-height) , (min-height: 1024px)  {
+		@media (min-width: $width-md) and (max-width: $pro-height) , (min-height: $ipad-height)  {
 			justify-content: flex-start;
 			padding-top: 50px;
 			width: 34%;
@@ -308,6 +297,9 @@
 			width: 34%;
 			flex-direction: column;
 			border-right: 2px solid $brown;
+		}
+		@media (min-width: $pro-height) and (min-height: $ipad-height) {
+			padding: 0 50px;
 		}
 		
 		//  ___________________________________________________________________________________
@@ -336,10 +328,19 @@
 			}
 			@media (min-width: $iphonex-landscape+21px) {
 				@include size(50px);
+				margin:10px 0 10px 45px;
+			}
+			@media (min-width: $ipad-height) and (min-height: $pro-height) {
+				@include size(80px);
+				margin:20px 0 20px 45px;
 			}
 			@media (min-width: 1350px) {
 				@include size(80px);
 				margin:15px 0 15px 5px;
+			}
+			@media (min-width: $pro-height+1px) {
+				@include size(50px);
+				margin:10px 0 10px 5px;
 			}
 
 
@@ -352,6 +353,12 @@
 
 			@media (min-width: 1350px) {
 				@include size(100%);
+			}
+			@media (min-width: $ipad-height) and (min-height: $pro-height) {
+				@include size (50px);
+			}
+			@media (min-width: $pro-height+1px) {
+				@include size(30px);
 			}
 		}
 
@@ -385,14 +392,14 @@
 				transform: translateX(60px) translateY(-30px);
 				text-align: left;
 			}
-			@media (min-width: $width-md), (min-height: 1024px) {
+			@media (min-width: $width-md), (min-height: $ipad-height) {
 				width: 350%;
 
 			}
 			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
 				transform: translateX(0px) translateY(10px);
 			}
-			@media (min-height: 1024px), (min-width: 1024px) {
+			@media (min-height: $ipad-height), (min-width: $ipad-height) {
 				transform: translateX(80px) translateY(-30px);
 			}
 
@@ -403,68 +410,26 @@
 			@media (min-width: 1350px) {
 				transform: translateX(100px) translateY(-45px);
 			}
-			 // ________________________________________-________________________________________
+			@media (min-width: $ipad-height) and (min-height: $pro-height) {
+				transform: translateX(105px) translateY(-45px);
+				font-size: 1.7rem;
+			}
+			@media (min-width: $pro-height) and (min-height: $ipad-height) {
+				font-size: 2rem;
+			} 
+			@media (min-width: $pro-height +1px) {
+				transform: translateX(70px) translateY(-33px);
+			}
+
+
+			
 		}
-
-
-
-		// &__item:nth-child(5), &__item:nth-child(8) {
-		// 	@media (min-width: $width-md) {
-		// 		@include pos($b:0);
-				
-		// 		.navigation-menu__subtitle {
-		// 			display: none;
-		// 		}
-		// 	}
-
-		// }
-
-		// &__item:nth-child(5) {
-		// 	@media (min-width: $width-md) {
-		// 		left: 0;		
-		// 	}
-
-		// 	@media (min-width: 1350px) {
-		// 		left: 50px;
-		// 	}
-		// 	@media (max-height: $width-md) and (orientation: landscape) {
-		// 		display: block;
-		// 	}
-
-		// 	@media (max-height: 850px) {
-		// 		display: none;
-		// 	}
-		// }
-
-
 
 		&__item:nth-child(7) {
 			@media (max-height: 800px) {
 				display: block;
 			}
-
-			@media (min-height: 801px) and (min-width: 1024px) {
-				display: none;
-			}	
 		}
-
-
-
-		// &__item:nth-child(8) {
-		// 	@media (min-width: $width-md) {
-		// 		left: 80px;	
-		// 	}
-
-		// 	@media (min-width: 1350px) {
-		// 		left: 160px;	
-		// 	}
-
-		// 	@media (max-height: 850px) {
-		// 		display: none;
-		// 	}
-
-
-		// }
 
 		&__item:nth-child(1) &__subtitle {
 			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
@@ -483,6 +448,15 @@
 			@media (min-width: $iphonex-landscape+21px) {
 				transform: translateY(-30px) translateX(80px);
 			}
+			@media (min-width: $ipad-height) and (min-height: $pro-height) {
+				transform: translateY(-45px) translateX(110px);
+			}
+			@media (min-width: $pro-height) and (min-height: $ipad-height) {
+				transform: translateY(-45px) translateX(100px);
+			}
+			@media (min-width: $pro-height +1px) {
+				transform: translateX(70px) translateY(-35px);
+			}
 		}
 		&__item:nth-child(7) &__subtitle {
 			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
@@ -498,47 +472,8 @@
 				transform: translateX(-30px) translateY(10px);
 			}
 		}
-
-
-	}
-}
-
-.wave-1, .wave-2, .wave-3 {
-	position: absolute;
-	width: 115%;
-	height: 115%;
-	top: -5px;
-	left: -5px;
-	animation: drift linear infinite;
-	transform-origin: 50% 48%;
-	border-radius: 38%;
-	filter: opacity(0.4);
-}
-
-.wave-1 {
-	background: linear-gradient(to right, rgba(214,148,113,1) 1%,rgba(126,64,31,1) 100%);
-	z-index: 3;
-	animation-duration: 5s;
+ // _________________________________________________________________________________
 
 }
-
-.wave-2 {
-	background: linear-gradient(to right, rgba(214,148,113,1) 1%,rgba(206,84,20,1) 100%);
-	z-index: 2;
-	animation-duration: 7s;
-
 }
 
-.wave-3 {
-	background: linear-gradient(to right, rgba(255,210,186,1) 1%,rgba(238,118,54,1) 100%);
-	z-index: 1;
-	animation-duration: 9s;
-}
-
-
-
-@keyframes drift {
-	from {
-		transform: rotate(360deg);
-	}
-}

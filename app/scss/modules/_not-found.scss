@@ -1,0 +1,84 @@
+.not-found {
+
+	&__link {
+		display: none;
+		@media (min-width: $width-md) {
+			display: block;
+		}
+		 
+	}
+	&__logo {
+		@media (min-width: $width-md) and (min-height: $width-md) {
+			width: 300px;
+		}
+		
+		
+	}
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: $width-sm) {
+		max-width: 70%;
+		}
+		@media (min-width: $width-md) and (min-height: $width-md) {
+			max-width: 100%;
+		}
+		@media (min-width: $ipad-height) {
+			max-width: 60%;		
+		}
+		@media (min-width: $ipad-height) and (min-height: $pro-height) {
+			max-width: 100%;
+			margin-top: 50px;
+		}
+		@media (min-width: $pro-height) {
+			max-width: 50%;
+			margin-top: 100px;
+		}
+		@media (min-width: $pro-height) and (min-height: 500px) {
+			max-width: 75%;
+		}
+	}
+	
+	
+	&__code {
+		font-size: 10rem;
+		font-weight: 700;
+		font-family: Righteous;
+		color: #000;
+		&:hover {
+			text-decoration: none;
+			color: #000;
+		}
+		@media (min-width: $width-md) and (min-height: $width-md) {
+			font-size: 15rem;
+		}
+		@media (min-width: $ipad-height) and (min-height: $pro-height) {
+			font-size: 20rem;
+		}
+		@media (min-width: $pro-height) and (min-height: 500px) {
+			font-size: 25rem;
+		}
+
+
+	}
+	&__dog-image {
+		@include pos($b:0,$r:0);
+
+		@media  (min-width: 360px) {
+			width: 300px;
+		}
+		@media (min-width: $width-md) and (min-height: $width-md) {
+			width: 500px;
+		}
+		@media (min-width: $ipad-height) and (min-height: $pro-height) {
+			width: 700px;
+		}
+		@media (min-width: $pro-height) {
+			width: 700px;
+		}
+		@media (min-width: $pro-height) and (min-height: 500px) {
+			width: 500px;
+		}
+	}
+}

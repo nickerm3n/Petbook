@@ -8,7 +8,45 @@
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 10px 10px rgba(0,0,0,.4);
-	
+
+	&--not-found {
+		max-width: 1440px;
+	min-width: 375px;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background: $cream;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px 10px rgba(0,0,0,.4);
+		&::before {
+		content: '';
+		display: block;
+		height: 80px;
+		background: url('../images/topWaves.png') no-repeat top center;
+		background-size: cover;
+		@media (min-height: 480px) {
+			height: 130px;
+		}
+		@media (min-width: $width-sm) {
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+			height: 120px;
+			
+		}
+		@media (min-width: $width-md) {
+			height: 140px;
+		}
+		@media (min-width: $width-lg) {
+			height: 170px;
+		}
+		@media (min-width: $pro-height) {
+			height: 190px;
+		}
+		}
+		
+	}
+
 	&::before {
 		content: '';
 		display: block;
@@ -163,6 +201,19 @@
 				@include size(50px);
 				@include pos($r: 17px, $t:70px); 
 			}
+
+
+			@media (min-width: 667px) and (max-height: 430px) {
+				width: 173px;
+				height: 35px;
+				padding: 5px 20px;
+				border-radius: 20px;
+				@include pos($r: 160px, $t:120px);
+			}
+			@media (min-width: $width-md) {
+				position: relative;
+				left: -30px;
+			}
 		}
 		@media (min-height: 666px) {
 			@include pos($b: 20px, $l:50%);
@@ -235,7 +286,7 @@
  	justify-content: center;
  	position: relative;
  	&--main {
- 		
+ 		display: flex;
  		@media (max-height: 415px) and (min-height: 315px) {
  			display: none;
  		}
@@ -416,7 +467,7 @@
 			}
 
 			@media (min-width: 1350px) {
-				@include size(100%);
+				@include size(70%);
 			}
 			@media (min-width: $ipad-height) and (min-height: $pro-height) {
 				@include size (50px);

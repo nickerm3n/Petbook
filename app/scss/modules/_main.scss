@@ -8,7 +8,45 @@
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 10px 10px rgba(0,0,0,.4);
-	
+
+	&--not-found {
+		max-width: 1440px;
+	min-width: 375px;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background: $cream;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px 10px rgba(0,0,0,.4);
+		&::before {
+		content: '';
+		display: block;
+		height: 80px;
+		background: url('../images/topWaves.png') no-repeat top center;
+		background-size: cover;
+		@media (min-height: 480px) {
+			height: 130px;
+		}
+		@media (min-width: $width-sm) {
+			background: url('../images/topWaves2.png') no-repeat top center;
+			background-size: cover;
+			height: 120px;
+			
+		}
+		@media (min-width: $width-md) {
+			height: 140px;
+		}
+		@media (min-width: $width-lg) {
+			height: 170px;
+		}
+		@media (min-width: $pro-height) {
+			height: 190px;
+		}
+		}
+		
+	}
+
 	&::before {
 		content: '';
 		display: block;
@@ -41,6 +79,9 @@
 		@media (min-width: $iphone6-landscape) {
 			height: 110px;			
 		}
+		@media (min-width: $ipad-height) {
+			height: 126px;
+		}
 		@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
 			width: 100%;
 		}
@@ -70,6 +111,7 @@
 	
 	&__logo {
 		padding-top: 35px;
+		cursor: pointer;
 		
 		@media (min-width: $iphone6-landscape) {
 			padding-top: 10px;
@@ -79,6 +121,24 @@
 		}
 		@media (min-width: $width-md) {
 			margin-left: 40px;
+		}
+		&--main {
+
+			@media (max-height: 415px) and (min-height: 315px) {
+				display: none;
+			}
+			@media (max-height: $ipad-height) and (max-width: 415px)  {
+				display: none;
+			}
+			@media (min-width: $iphone6-landscape) {
+				padding-top: 10px;
+			}
+			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
+				margin-left: 30px;
+			}
+			@media (min-width: $width-md) {
+				margin-left: 40px;
+			}
 		}
 
 	}
@@ -98,6 +158,15 @@
 		height: 60px;
 		border-radius: 50%;
 		background: linear-gradient(to right, rgba(214,148,113,1) 0%,rgba(126,64,31,1) 100%);
+		&--main {
+			@media (max-height: 415px) and (min-height: 315px) {
+				display: none;
+			}
+			@media (max-height: $ipad-height) and (max-width: 415px)  {
+				display: none;
+			}
+			
+		}
 		@media (min-width: $iphone6-landscape) {
 			order: 1;
 			margin-left: 35px;
@@ -113,7 +182,39 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		&--main {
+			width: 345px;
+			height: 50px;
+			background: linear-gradient(270deg, #7E401F 0%, #D69471 100%);
+			border-radius: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			@media (min-width: $iphone6-landscape) {
+				position: static;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+			}
+			@media (max-width: 430px) and (min-height: $width-sm) {
+				@include size(50px);
+				@include pos($r: 17px, $t:70px); 
+			}
 
+
+			@media (min-width: 667px) and (max-height: 430px) {
+				width: 173px;
+				height: 35px;
+				padding: 5px 20px;
+				border-radius: 20px;
+				@include pos($r: 160px, $t:120px);
+			}
+			@media (min-width: $width-md) {
+				position: relative;
+				left: -30px;
+			}
+		}
 		@media (min-height: 666px) {
 			@include pos($b: 20px, $l:50%);
 			transform: translateX(-50%);
@@ -184,6 +285,16 @@
  	display: flex;
  	justify-content: center;
  	position: relative;
+ 	&--main {
+ 		display: flex;
+ 		@media (max-height: 415px) and (min-height: 315px) {
+ 			display: none;
+ 		}
+ 		@media (max-height: $ipad-height) and (max-width: 415px)  {
+ 			display: none;
+ 		}
+
+ 	}
 
  	@media (min-width: 667px) {
  		margin-top: 10px;
@@ -279,7 +390,11 @@
 			width: 34%;
 			flex-direction: column;
 			border-right: 2px solid $brown;
+			
 
+		}
+		@media (min-width: $width-md) and (min-height: 500px ) {
+			min-height: 100vh;
 		}
 
 		@media (min-height: 375px) and  (max-height: 414px)  {
@@ -352,7 +467,7 @@
 			}
 
 			@media (min-width: 1350px) {
-				@include size(100%);
+				@include size(70%);
 			}
 			@media (min-width: $ipad-height) and (min-height: $pro-height) {
 				@include size (50px);

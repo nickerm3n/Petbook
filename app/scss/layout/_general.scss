@@ -50,6 +50,14 @@ body {
 	&.active {
 		background: linear-gradient(270deg, #646464 0%, #D3D3D3 100%);
 	}
+
+	&.tabs__link--services {
+		padding: 8px 0px;
+		font-size: 17px;
+		display: flex;
+		justify-content: center;
+	}
+	
 }
 
 .tabs__link, .index__link {

@@ -426,6 +426,7 @@
 			position: relative;
 			color: #000;
 			
+			
 			@media (min-width: $iphone6-landscape) {
 				@include size(45px);
 				margin: 0 25px 40px 25px;
@@ -447,7 +448,7 @@
 			}
 			@media (min-width: $ipad-height) and (min-height: $pro-height) {
 				@include size(80px);
-				margin:20px 0 20px 45px;
+				margin:20px 0 20px 25px;
 			}
 			@media (min-width: 1350px) {
 				@include size(80px);
@@ -456,24 +457,29 @@
 			@media (min-width: $pro-height+1px) {
 				@include size(50px);
 				margin:10px 0 10px 5px;
+			
 			}
 
 
 		}
 
 		&__img {
-			@media (min-width: $iphone6-landscape) {
+			@include size(55px);
+
+			@media (min-width: 600px) {
 				@include size(35px);
 			}
-
-			@media (min-width: 1350px) {
-				@include size(70%);
+			@media (min-width: $width-md) and (min-height: $ipad-height) {
+				@include size(40px);
 			}
 			@media (min-width: $ipad-height) and (min-height: $pro-height) {
-				@include size (50px);
+				@include size(50px);
 			}
-			@media (min-width: $pro-height+1px) {
-				@include size(30px);
+			@media (min-width: $pro-height) {
+				@include size(55px);
+			}
+			@media (min-width: $pro-height+100px) {
+				@include size(40px);
 			}
 		}
 
@@ -487,107 +493,83 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			color: #000;
+			text-decoration: none;
+			transition: .1s;
+			&--disabled {
+				position: relative;
+			    background: linear-gradient(270deg,#646464,#d3d3d3);
+			width: 100%;
+			height: 100%;
+			z-index: 4;
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #000;
+			text-decoration: none;
+			transition: .1s;
+			pointer-events: none;
+			}
+			&:hover {
+				@media (min-width: $width-md) {
+					color: #000;
+					transform: scale(1.1);
+					border: 3px solid #CE5414;
+				}
+				
+			}
+
 		}
 
 		&__subtitle {
-			@include pos($b:-23px);
+			@include pos($b:-50px);
 			text-align: center;
-			width: 100%;
-			//  media for menu subtitle
-			@media (min-width: $iphone6-landscape), (min-width: 812px) and (orientation: landscape) {
-				@include pos($l:-50%, $b:-20px);
-				transform: none;
-				text-align: center;
-				width: 200%;
+			line-height: 50px;
+			height: 50px;
+			font-size: 1.1rem;
+			width: 115px;
+			@media (min-width: 600px) {
+				font-size: 1.1rem;
+				height: 30px;
+				line-height: 30px;
+				@include pos($b:-30px);
 			}
-
-			@media (min-width: $width-md) {
-				width: 230%;
-				position: static;
-				transform: translateX(60px) translateY(-30px);
-				text-align: left;
-			}
-			@media (min-width: $width-md), (min-height: $ipad-height) {
-				width: 350%;
-
-			}
-			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
-				transform: translateX(0px) translateY(10px);
-			}
-			@media (min-height: $ipad-height), (min-width: $ipad-height) {
-				transform: translateX(80px) translateY(-30px);
-			}
-
 			@media (min-width: $width-md) and (min-height: $ipad-height) {
-				font-size: 1.35rem;
-			}
-
-			@media (min-width: 1350px) {
-				transform: translateX(100px) translateY(-45px);
-			}
-			@media (min-width: $ipad-height) and (min-height: $pro-height) {
-				transform: translateX(105px) translateY(-45px);
-				font-size: 1.7rem;
-			}
-			@media (min-width: $pro-height) and (min-height: $ipad-height) {
-				font-size: 2rem;
-			} 
-			@media (min-width: $pro-height +1px) {
-				transform: translateX(70px) translateY(-33px);
-			}
-
-
-			
-		}
-
-		&__item:nth-child(7) {
-			@media (max-height: 800px) {
-				display: block;
-			}
-		}
-
-		&__item:nth-child(1) &__subtitle {
-			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
-				transform: translateX(-20px) translateY(10px);
-			}
-		}
-
-		&__item:nth-child(6) &__subtitle {
-			bottom: -35px;
-			@media (min-width: $iphone6-landscape) {
-				bottom: -33px;
-			}
-			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
-				transform: translateX(-30px) translateY(10px);
+				@include pos($l: 60px, $t:18px);
+				font-size: 1.5rem;
+				width: 200px;
+				text-align: left;
+				padding-left: 10px;
 			}
 			@media (min-width: $iphonex-landscape+21px) {
-				transform: translateY(-30px) translateX(80px);
+				@include pos($l: 47px, $t:12px);
+				text-align: left;
+				font-size: 1.6rem;
+				width: 175px;
+				padding-left: 10px;
+			}
+			@media (min-width: $ipad-height) and (min-height: 700px) {
+				@include pos($l: 48px, $t:14px);
+				text-align: left;
+				font-size: 2rem;
+				width: 230px;
+				padding-left: 20px;
 			}
 			@media (min-width: $ipad-height) and (min-height: $pro-height) {
-				transform: translateY(-45px) translateX(110px);
+				@include pos($l: 75px, $t:30px);
 			}
-			@media (min-width: $pro-height) and (min-height: $ipad-height) {
-				transform: translateY(-45px) translateX(100px);
+			@media (min-width: $pro-height) {
+				@include pos($l: 70px,$t:30px);
+				font-size: 2.2rem;
+				width: 260px;
+				// height: 
 			}
-			@media (min-width: $pro-height +1px) {
-				transform: translateX(70px) translateY(-35px);
-			}
-		}
-		&__item:nth-child(7) &__subtitle {
-			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
-				transform: translateX(3px) translateY(10px);
-			}
-		}
-		&__item:nth-child(9) &__subtitle {
-			left: -15px;
-			@media (min-width: $iphone6-landscape) {
-				left: -33px;
-			}
-			@media (min-width: $iphonex-landscape) and (max-width: $iphonex-landscape+20px) {
-				transform: translateX(-30px) translateY(10px);
+			@media (min-width: $pro-height+100px) {
+				@include pos($l: 48px,$t:12px);
+				height: 80px;
 			}
 		}
- // _________________________________________________________________________________
 
 }
 }

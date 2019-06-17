@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Создать объявление</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+	<link src="js/libs/jquery-ui/jquery-ui.css"></link>
+	<link rel="stylesheet" href="css/global.min.css">
+	<!--endbuild-->
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+	
+	<div class="petbook-container">
+		<header class="header">
+			<div class="header__logo--main">
+				<a href="index.html">
+					<img src="images/logo.png" alt="logo">
+				</a>
+			</div>
+
+			<div class="header__wrapper">
+				<div class="header__profile header__profile--main">
+					<img src="images/profile.png" alt="profile">
+				</div>
+				<a href="index.html" class="index__link">На главную</a>
+
+			</div>		
+
+		</header>
+
+		<nav class="navigation--main">
+			<ul class="navigation-menu">
+				<li class="navigation-menu__item">
+					
+					<a href="adverts.html" class="navigation-menu__link">
+						<img class="navigation-menu__img" src="images/menu/book.png" alt="book">
+						<div class="navigation-menu__subtitle ">Объявления</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
+						<div class="navigation-menu__subtitle ">Карта</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/bonus.png" alt="bonus">
+						<div class="navigation-menu__subtitle ">Бонусы</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="servisec.html" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/home.png" alt="home">
+						<div class="navigation-menu__subtitle ">Сервисы</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/facebook.png" alt="facebook">
+						<div class="navigation-menu__subtitle ">Фейсбук</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="good-hand.html" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/hand.png" alt="hand">
+						<div class="navigation-menu__subtitle ">В хорошие руки</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/about.png" alt="about">
+						<div class="navigation-menu__subtitle ">О нас</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/telegram.png" alt="telegram">
+						<div class="navigation-menu__subtitle ">Телеграм</div>
+					</a>
+					
+					
+				</li>
+
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/donate.png" alt="donate">
+						<div class="navigation-menu__subtitle ">Пожертвования</div>
+					</a>
+					
+					
+				</li>
+				
+			</ul>
+			
+		</nav>
+		<div id="tabs" class="new-ad__tabs">
+			<ul class="tabs__links">
+				<li class="tabs__item tabs__item--mew-ad"><a class="tabs__link tabs__link--new-ad active" href="#tabs-1">Нашел</a></li>
+				<li class="tabs__item tabs__item--mew-ad"><a class="tabs__link tabs__link--new-ad" href="#tabs-2">Потерял</a></li>
+			</ul>
+			<div id="tabs-1" class="new-ad__tabs-window">
+				<form action="#">
+					<p class="new-ad__field-desc">Отметить место на карте *</p>
+					<div id="map" class="new-ad__map"></div>
+					<p class="new-ad__field-desc">Загрузить фото</p>
+					<input class="new-ad__file-upload" type="file" name="file" accept="image/*">
+					<div class="new-ad__img-output">
+						
+					</div>
+					
+					<div class="new-ad__field-wrap">
+						<label for="animal-name" class="new-ad__field-label">Кого нашли</label>
+						<input class="new-ad__field" type="text" id="animal-name" name="animal-name">
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="description" class="new-ad__field-label">Описание</label>
+						<textarea class="new-ad__field" rows="5" cols="10" type="text" id="description" name="description"></textarea>
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="phone" class="new-ad__field-label">Телефон</label>
+						<input class="new-ad__field" type="phone" id="phone" name="phone">
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="date" class="new-ad__field-label">Дата</label>
+						<input class="new-ad__field" type="text" id="date" name="date">
+					</div>
+					<button type="submit" class="new-ad__button">Готово</button>
+				</form>
+				
+
+			</div>
+			<div id="tabs-2" class="new-ad__tabs-window">
+				<form action="#">
+					<p class="new-ad__field-desc">Отметить место на карте *</p>
+					<div id="map" class="new-ad__map"></div>
+					<p class="new-ad__field-desc">Загрузить фото</p>
+					<input class="new-ad__file-upload" type="file" name="file" accept="image/*">
+					<div class="new-ad__img-output">
+						
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="name" class="new-ad__field-label">Кличка</label>
+						<input class="new-ad__field" type="text" id="name" name="name">
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="animal-name" class="new-ad__field-label">Кто пропал</label>
+						<input class="new-ad__field" type="text" id="animal-name" name="animal-name">
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="description" class="new-ad__field-label">Описание</label>
+						<textarea class="new-ad__field" rows="5" cols="10" type="text" id="description" name="description"></textarea>
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="phone" class="new-ad__field-label">Телефон</label>
+						<input class="new-ad__field" type="phone" id="phone" name="phone">
+					</div>
+					<div class="new-ad__field-wrap">
+						<label for="date" class="new-ad__field-label">Дата</label>
+						<input class="new-ad__field" type="text" id="date" name="date">
+					</div>
+					<button type="submit" class="new-ad__button">Готово</button>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<!--build:js js/main.min.js -->
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/jquery-ui/jquery-ui.js"></script> 
+	<script src="js/libs/bootstrap.bundle.min.js"></script>
+	<script src="js/main.js"></script>
+	<!--endbuild-->
+
+</body>
+</html>

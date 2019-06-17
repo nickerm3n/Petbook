@@ -158,7 +158,9 @@
 		height: 60px;
 		border-radius: 50%;
 		background: linear-gradient(to right, rgba(214,148,113,1) 0%,rgba(126,64,31,1) 100%);
+		cursor: pointer;
 		&--main {
+			cursor: pointer;
 			@media (max-height: 415px) and (min-height: 315px) {
 				display: none;
 			}
@@ -182,6 +184,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		z-index: 99;
+		
 		&--main {
 			width: 345px;
 			height: 50px;
@@ -190,6 +194,8 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			z-index: 99;
+			
 			
 			@media (min-width: $iphone6-landscape) {
 				position: static;
@@ -499,19 +505,24 @@
 			&--disabled {
 				position: relative;
 			    background: linear-gradient(270deg,#646464,#d3d3d3);
-			width: 100%;
-			height: 100%;
-			z-index: 4;
-			border-radius: 8px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: #000;
-			text-decoration: none;
-			transition: .1s;
-			pointer-events: none;
+				width: 100%;
+				height: 100%;
+				z-index: 4;
+				border-radius: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #000;
+				text-decoration: none;
+				transition: .1s;
+				pointer-events: none;
 			}
 			&:hover {
+				@media (min-width: 300px ) {
+					color: #000;
+					transform: scale(1.1);
+					border: 3px solid #CE5414;
+				}
 				@media (min-width: $width-md) {
 					color: #000;
 					transform: scale(1.1);

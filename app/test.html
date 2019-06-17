@@ -5,163 +5,402 @@
 	<meta name="description" content="Starter">
 	<meta name="author" content="Admin">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Starter</title>
+	<title>Объявления</title>
 
 	<link rel="icon" href="images/favicon.png">
 
 	<!--build:css css/styles.min.css-->
 	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+	<link src="js/libs/jquery-ui/jquery-ui.css"></link>
 	<link rel="stylesheet" href="css/global.min.css">
 	<!--endbuild-->
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 </head>
 <body>
 	
 	<div class="petbook-container">
 		<header class="header">
-			<div class="header__logo">
+			<div class="header__logo--main">
 				<a href="index.html">
 					<img src="images/logo.png" alt="logo">
 				</a>
 			</div>
+
 			<div class="header__wrapper">
-				<div class="header__profile">
+				<div class="header__profile header__profile--main">
 					<img src="images/profile.png" alt="profile">
 				</div>
-				<div class="header__add-advert">
+				<a href="index.html" class="index__link">На главную</a>
+				<a href="new-ad.html" class="header__add-advert--main">
 					<img src="images/plus.png" alt="plus">
-				</div>
+				</a>
 			</div>		
 
 		</header>
 
-		<nav class="navigation">
+		<nav class="navigation--main">
 			<ul class="navigation-menu">
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="index.html">
-							<img class="navigation-menu__img" src="images/menu/book.png" alt="book">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Объявления</div>
+					
+					<a href="adverts.html" class="navigation-menu__link">
+						<img class="navigation-menu__img" src="images/menu/book.png" alt="book">
+						<div class="navigation-menu__subtitle ">Объявления</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Карта</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
+						<div class="navigation-menu__subtitle ">Карта</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/bonus.png" alt="bonus">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Бонусы</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/bonus.png" alt="bonus">
+						<div class="navigation-menu__subtitle ">Бонусы</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/home.png" alt="home">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Сервисы</div>
+					<a href="servisec.html" class="navigation-menu__link--disabled">
+						
+						<img class="navigation-menu__img" src="images/menu/home.png" alt="home">
+						<div class="navigation-menu__subtitle ">Сервисы</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/facebook.png" alt="facebook">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Фейсбук</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/facebook.png" alt="facebook">
+						<div class="navigation-menu__subtitle ">Фейсбук</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/hand.png" alt="hand">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">В хорошие руки</div>
+					<a href="good-hand.html" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/hand.png" alt="hand">
+						<div class="navigation-menu__subtitle ">В хорошие руки</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/about.png" alt="about">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">О нас</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/about.png" alt="about">
+						<div class="navigation-menu__subtitle ">О нас</div>
+					</a>
+					
+					
 				</li>
 				
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/telegram.png" alt="telegram">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Телеграм</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/telegram.png" alt="telegram">
+						<div class="navigation-menu__subtitle ">Телеграм</div>
+					</a>
+					
+					
 				</li>
 
 				<li class="navigation-menu__item">
-					<div class="navigation-menu__link">
-						<a href="#">
-							<img class="navigation-menu__img" src="images/menu/donate.png" alt="donate">
-						</a>
-					</div>
-					<div class="wave-1"></div>
-					<div class="wave-2"></div>
-					<div class="wave-3"></div>
-					<div class="navigation-menu__subtitle ">Пожертвования</div>
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/donate.png" alt="donate">
+						<div class="navigation-menu__subtitle ">Пожертвования</div>
+					</a>
+					
+					
 				</li>
 				
 			</ul>
-
-			<div class="dog-image">
-				TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			</div>
+			<!-- tabs here -->
 		</nav>
+		<div id="tabs">
+			<ul class="tabs__links tabs__links--servisec">
+				<li class="tabs__item"><a class="tabs__link tabs__link--services active" href="#tabs-1">Ветклиники</a></li>
+				<li class="tabs__item"><a class="tabs__link tabs__link--services" href="#tabs-2">Кинологи</a></li>
+				<li class="tabs__item"><a class="tabs__link tabs__link--services" href="#tabs-3">Трен. площадки</a></li>
+				<li class="tabs__item"><a class="tabs__link tabs__link--services" href="#tabs-4">Зоомагазин</a></li>
+			</ul>
+			<div id="tabs-1" class="tabs__adverts-wrapper">
+				<div class="tabs__adverts">
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/servisec/card1.svg" alt="card1">
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/servisec/card2.svg" alt="card1">
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/servisec/card3.svg" alt="card1">
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/servisec/card3.svg" alt="card1">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabs-2" class="tabs__adverts-wrapper">
+				<div class="tabs__adverts">
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabs-3" class="tabs__adverts-wrapper">
+				<div class="tabs__adverts">
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabs-4" class="tabs__adverts-wrapper">
+				<div class="tabs__adverts">
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/cat.jpg" alt="cat">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал рыжий кот Артур, немного диковат, в районе ул.Шевченка 50</p>
+							<p class="advert__tel"><a href="tel:+380501234567">050 123 45 67</a></p>
+							<p class="advert__date"><time>18.01.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/buldog.jpg" alt="buldog">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал французский бульдог, молодая сука, в районе ул. Калинина 47 </p>
+							<p class="advert__tel"><a href="tel:+380671234567 ">067 123 45 67 </a></p>
+							<p class="advert__date"><time>23.03.2019</time></p>
+						</div>
+					</div>
+					<div class="advert">
+						<div class="advert__img">
+							<img src="images/animal/haski.jpg" alt="haski">
+						</div>
+						<div class="advert__text">
+							<p class="advert__desc">Пропал хаска, кобель отзывается на кличку Муха, в районе ул. Чайной </p>
+							<p class="advert__tel"><a href="tel:+380991234567">099 123 45 67</a></p>
+							<p class="advert__date"><time>4.04.2019</time></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 	</div>
+</div>
 
-	<!--build:js js/main.min.js -->
-	<script src="js/libs/jquery.min.js"></script>
-	<script src="js/libs/bootstrap.bundle.min.js"></script>
-	<script src="js/main.js"></script>
-	<!--endbuild-->
+<!--build:js js/main.min.js -->
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/jquery-ui/jquery-ui.js"></script> 
+<script src="js/libs/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<!--endbuild-->
 
 </body>
 </html>

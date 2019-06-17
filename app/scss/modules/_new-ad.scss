@@ -1,0 +1,113 @@
+.new-ad {
+	&__tabs {
+		&-window {
+			position: relative;
+			@media (min-width: $width-md) {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+
+		}
+	}
+	&__file-upload {
+		width: 100%;
+		height: 80px;
+		background: $grey;
+		border-radius: 8px;
+		border: 1px solid #7E401F;
+		color: $grey;
+		position: relative;
+		cursor: pointer;
+		margin-bottom: 10px;
+		@media (min-width: $width-md) and (min-height: $pro-height) {
+			margin-bottom: 30px;
+		}
+
+		&::before {
+			content: '';
+			@include pos($t:0, $l:0,$z:99);
+			width: 100%;
+			height: 100%; 
+			background: $grey;
+			
+		}
+		&::after {
+			content: '';
+			@include pos($t:0,$b:0,$r:0,$l:0,$z:100);
+			background: url('../images/plus.png') no-repeat center center;
+		}
+	}
+	&__field {
+		width: 70%;
+		background: #f6f6f6;
+		border-radius: 8px;
+		border: 1px solid #7E401F;
+		font-size: 1.2rem;
+		padding: 5px;
+		margin-bottom: 5px;
+		@media (min-width: $width-md) {
+			font-size: 1.5rem;
+		}
+		@media (min-width: $ipad-height) {
+			  font-size: 1.5rem;	
+			}
+		&-desc {
+			margin-top: 10px;
+			margin-bottom: 5px;
+			font-size: 1.2rem;
+			@media (min-width: $width-md) {
+			font-size: 1.5rem;
+		}
+			@media (min-width: $ipad-height) {
+			  font-size: 1.5rem;	
+			}
+		}
+		&-label {
+			font-size: 1.2rem;
+			line-height: 2rem;
+			@media (min-width: $width-md) {
+			font-size: 1.5rem;
+		}
+			@media (min-width: $ipad-height) {
+			  font-size: 1.5rem;	
+			}
+		}
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			@media (min-width: $ipad-height) {
+				margin-bottom: 5px;	
+			}
+			@media (min-width: $width-md) {
+				margin-bottom: 10px;
+			}
+		}
+		
+	}
+	&__map {
+		width: 100%;
+		height: 80px;
+	}
+	&__button {
+		background: linear-gradient(270deg,#7e401f 0,#d69471);
+	padding: 5px 20px;
+	text-align: center;
+	position: absolute;
+	margin-top: 5px;
+	right: 10px;
+	transition: .1s;
+	border-radius: 25px;
+	width: 173px;
+	height: 35px;
+	font-size: 1.6rem;
+	color: #fff;
+	@media (min-width: $width-md) {
+		right: 0;
+	}
+	&:hover {
+		transform: scale(1.1);
+		text-decoration: none;
+		color: #fff;
+	}
+	}
+}

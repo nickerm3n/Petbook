@@ -6,6 +6,7 @@
 	border: 1px solid $brown;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 0 15px 1px $brown;
 
 	
 	@media (min-width: $width-md) {
@@ -26,6 +27,18 @@
 	
 	&.show {
 		bottom: 0;
+		
+		.layer:nth-child(1) {
+			animation: swing 2s 1 ease-in-out;
+		}
+
+		.layer:nth-child(2) {
+			animation: swing 3s 1 ease-in-out;
+		}
+
+		.layer:nth-child(3) {
+			animation: swing 3.5s 1 ease-in-out;
+		}
 	}
 	
 	.layers {
@@ -97,7 +110,7 @@
 
 .faq-button {
 	@include pos($b:15px, $r: 15px);
-	@include size(35px, 40px);
+	@include size(45px, 50px);
 	background: red;
 	background: $brown;
 	border-radius: 5px;

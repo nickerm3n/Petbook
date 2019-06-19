@@ -1,0 +1,13 @@
+#map {
+	height: 80%;
+	width: 90%;
+	margin:80px auto 0;
+	border-radius: 8px;
+	border: 1px solid $brown;
+	
+	@media (min-width: $width-md) {
+		margin:140px auto 0;
+		width: 60%;
+		height: 65rem;
+	}
+}

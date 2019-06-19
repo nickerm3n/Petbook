@@ -5,7 +5,7 @@
 	<meta name="description" content="Starter">
 	<meta name="author" content="Admin">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Petbook - найди своего друга!</title>
+	<title>Карта</title>
 
 	<link rel="icon" href="images/favicon.png">
 
@@ -18,28 +18,31 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 </head>
 <body>
 	
 	<div class="petbook-container">
 		<header class="header">
-			<div class="header__logo">
+			<div class="header__logo--main">
 				<a href="index.html">
 					<img src="images/logo.png" alt="logo">
 				</a>
 			</div>
+
 			<div class="header__wrapper">
-				<div class="header__profile">
+				<div class="header__profile header__profile--main">
 					<img src="images/profile.png" alt="profile">
 				</div>
-				<a href="new-ad.html" class="header__add-advert">
+				<a href="index.html" class="index__link">На главную</a>
+				<a href="new-ad.html" class="header__add-advert--main">
 					<img src="images/plus.png" alt="plus">
 				</a>
 			</div>		
 
 		</header>
 
-		<nav class="navigation">
+		<nav class="navigation--main">
 			<ul class="navigation-menu">
 				<li class="navigation-menu__item">
 					
@@ -52,7 +55,7 @@
 				</li>
 				
 				<li class="navigation-menu__item">
-					<a href="map.html" class="navigation-menu__link">
+					<a href="#" class="navigation-menu__link--disabled">
 						
 							<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
 							<div class="navigation-menu__subtitle ">Карта</div>
@@ -132,20 +135,19 @@
 				</li>
 				
 			</ul>
-
-			<div class="dog-image">
-				<img src="images/mops-uncle-dog.png" alt="mops-uncle-dog">
-			</div>
-			<p class="navigation__info" >Сервис Petbook позволяет не только разыскать своего любимца, но и найти себе настоящего и преданного друга. На этом сайте можно совершенно бесплатно подать объявление о том, что у вас потерялся домашний любимец.</p>
+			<!-- tabs here -->
 		</nav>
+		<div id="map"></div>
+		
 	</div>
-	<div class="login"></div>
 
-
-
+	
 	<!--build:js js/main.min.js -->
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKokc58ugbv9Oo5tKJVaZlbhoiGqh1bwQ&callback=initMap">
+	</script>
 	<script src="js/libs/jquery.min.js"></script>
-	<script src="js/libs/jquery-ui/jquery-ui.js"></script>
+	<script src="js/libs/jquery-ui/jquery-ui.js"></script> 
 	<script src="js/libs/bootstrap.bundle.min.js"></script>
 	<script src="js/main.js"></script>
 	<!--endbuild-->

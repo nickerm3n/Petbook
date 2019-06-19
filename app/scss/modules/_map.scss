@@ -1,13 +1,110 @@
-#map {
+#map-wrapper {
 	height: 80%;
 	width: 90%;
 	margin:80px auto 0;
 	border-radius: 8px;
 	border: 1px solid $brown;
+	position: relative;
+	overflow: hidden;
+
 	
 	@media (min-width: $width-md) {
 		margin:140px auto 0;
 		width: 60%;
 		height: 65rem;
 	}
+
+}
+
+#map {
+	height:100%;
+}
+
+.faq {
+	@include pos($b:-100%, $r: 0);
+	transition: all 4s ease-in-out;
+	
+	&.show {
+		bottom: 0;
+	}
+	
+	.layers {
+		position:relative;
+		height: 400px;
+		color: #fff;
+		transform-origin: right bottom;
+		
+		.layer {
+			@include pos($b:0, $r: 0);
+			animation-fill-mode: forwards;
+			
+			p {
+				display: flex;
+				align-items: center;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				border-bottom: 2px solid rgba(255, 255, 255, .5);
+			}
+
+			span {
+				padding-left: 10px;
+			}
+
+			img {
+				width: 25%;
+			}
+
+		}
+		
+		.layer:nth-child(1) {
+			@include size(250px, 400px);
+			background: url('../images/layers/layer1.png') top center no-repeat;
+			z-index:3;
+			padding: 40px;
+			animation: swing 2s 1 ease-in-out;
+		}
+		.layer:nth-child(2) {
+			@include size(285px, 410px);
+			background: url('../images/layers/layer2.png') top center no-repeat;
+			z-index:2;
+			animation: swing 3s 1 ease-in-out;
+		}
+		.layer:nth-child(3) {
+			@include size(284px, 420px);
+			background: url('../images/layers/layer3.png') top center no-repeat;
+			z-index:1;
+			animation: swing 3.5s 1 ease-in-out;
+		}
+
+		.close-button {
+			@include pos($t:15px, $r: 15px);
+			@include size(35px, 35px);
+			z-index: 5;
+			background: $brown;
+			border-radius: 50%;
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+			transform: rotate(0);
+			transition: all .5s ease-in-out;
+			
+			&:hover {
+				transform: rotate(360deg)	
+			}
+		}
+
+	}
+}
+
+
+.faq-button {
+	@include pos($b:15px, $r: 15px);
+	@include size(35px, 40px);
+	background: red;
+	background: $brown;
+	border-radius: 5px;
+}
+
+@keyframes swing {
+0 {transform: rotate(-25deg)}
+50% {transform: rotate(35deg)}
+100% {transform: rotate(0)}
 }

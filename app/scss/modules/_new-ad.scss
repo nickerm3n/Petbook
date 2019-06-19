@@ -2,9 +2,16 @@
 	&__tabs {
 		&-window {
 			position: relative;
+			
+			padding:0 2%;
 			@media (min-width: $width-md) {
 				max-width: 80%;
 				margin: 0 auto;
+				overflow-y: scroll;
+			}
+			@media (min-height: $ipad-height) {
+				overflow-y: hidden;
+				height: 60vh;
 			}
 
 		}
@@ -94,7 +101,8 @@
 	text-align: center;
 	position: absolute;
 	margin-top: 5px;
-	right: 10px;
+	margin-bottom: 15px;
+	right: 2%;
 	transition: .1s;
 	border-radius: 25px;
 	width: 173px;
@@ -102,7 +110,7 @@
 	font-size: 1.6rem;
 	color: #fff;
 	@media (min-width: $width-md) {
-		right: 0;
+		right: 2%;
 	}
 	&:hover {
 		transform: scale(1.1);
@@ -111,3 +119,23 @@
 	}
 	}
 }
+// scroll 
+.new-ad__tabs-window::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+		border-radius: 10px;
+		background-color: $lightcream;
+	}
+
+	.new-ad__tabs-window::-webkit-scrollbar
+	{
+		width: 8px;
+		background-color: #F5F5F5;
+	}
+
+	.new-ad__tabs-window::-webkit-scrollbar-thumb
+	{
+		border-radius: 10px;
+		background-color: $brown;
+		position: relative;
+	}

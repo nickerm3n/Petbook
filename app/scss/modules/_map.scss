@@ -12,7 +12,7 @@
 	@media (min-width: $width-md) {
 		margin:140px auto 0;
 		width: 60%;
-		height: 65rem;
+		height: 63rem;
 	}
 
 }
@@ -23,21 +23,21 @@
 
 .faq {
 	@include pos($b:-100%, $r: 0);
-	transition: all 4s ease-in-out;
+	transition: all 1.5s ease-in-out;
 	
 	&.show {
 		bottom: 0;
 		
 		.layer:nth-child(1) {
-			animation: swing 2s 1 ease-in-out;
+			animation: swing .5s 1 ease-in-out;
 		}
 
 		.layer:nth-child(2) {
-			animation: swing 3s 1 ease-in-out;
+			animation: swing 1s 1 ease-in-out;
 		}
 
 		.layer:nth-child(3) {
-			animation: swing 3.5s 1 ease-in-out;
+			animation: swing 1.2s 1 ease-in-out;
 		}
 	}
 	
@@ -74,19 +74,19 @@
 			background: url('../images/layers/layer1.png') top center no-repeat;
 			z-index:3;
 			padding: 40px;
-			animation: swing 2s 1 ease-in-out;
+			animation: swing 0.5s 1 ease-in-out;
 		}
 		.layer:nth-child(2) {
 			@include size(285px, 410px);
 			background: url('../images/layers/layer2.png') top center no-repeat;
 			z-index:2;
-			animation: swing 3s 1 ease-in-out;
+			// animation: swing 1s 1 ease-in-out;
 		}
 		.layer:nth-child(3) {
 			@include size(284px, 420px);
 			background: url('../images/layers/layer3.png') top center no-repeat;
 			z-index:1;
-			animation: swing 3.5s 1 ease-in-out;
+			// animation: swing 1.5s 1 ease-in-out;
 		}
 
 		.close-button {
@@ -97,10 +97,10 @@
 			border-radius: 50%;
 			box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
 			transform: rotate(0);
-			transition: all .5s ease-in-out;
+			// transition: all .5s ease-in-out;
 			
 			&:hover {
-				transform: rotate(360deg)	
+				transform: rotate(360deg);
 			}
 		}
 
@@ -114,10 +114,15 @@
 	background: red;
 	background: $brown;
 	border-radius: 5px;
+	transition: all .3s ease-in-out;
+	
+	&:hover {
+		background: lighten($brown, 20%);
+	}
 }
 
 @keyframes swing {
-0 {transform: rotate(-25deg)}
-50% {transform: rotate(35deg)}
+0 {transform: rotate(-45deg)}
+50% {transform: rotate(45deg)}
 100% {transform: rotate(0)}
 }

@@ -15,6 +15,67 @@
 		height: 63rem;
 	}
 
+	form {
+		@include pos($t:15px, $l:15px);
+		width: 30%;
+		background: $brown;
+		border-radius: 5px;
+		padding: 10px;
+		
+		label {
+			color: #fff;
+			display: inline-block;
+			padding-bottom: 10px;
+		}
+		
+		input {
+			border-radius: 5px;
+			background: $cream;
+			padding: 5px;
+			width: 100%;
+		}
+
+		select {
+			margin: 20px 0;
+		}
+
+		button {
+			border-radius: 5px;
+			padding: 5px;
+		}
+
+		.preview {
+			display: flex;
+			justify-content: center;
+			background: $cream;
+			padding: 10px 0;
+			border-radius: 5px;
+			
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			p {
+				background: #FFF;
+				padding: 5px 10px;
+				border-radius: 6px;
+				margin-bottom: 5px;
+				color: #000;
+			}
+
+			// img {
+			// 	width: 100%;
+			// }
+		}
+
+		p {
+			padding-top: 10px;
+			color: #fff;
+		}
+	}
+
 }
 
 #map {
@@ -103,7 +164,6 @@
 				transform: rotate(360deg);
 			}
 		}
-
 	}
 }
 

@@ -170,6 +170,26 @@
 			<button class="faq-button" type="button">
 				<img src="images/layers/help.png" alt="help">
 			</button>
+			<form action="#" class="marker-generator">
+				<label for="marker-generator__input">Описание животного:<br>(порода, кличка, и тд.)</label>
+				<input id='marker-generator__input' type="text" name="" placeholder="вводить сюда">
+				<div class="wrapper">
+					<select class="marker-generator__select" size="1" name="hero[]">
+					    <option selected disabled>Тип маркера</option>
+					    <option value="Нашел">Нашел</option>
+					    <option value="Потерял">Потерял</option>
+					    <option value="Партнер">Партнер</option>
+				   </select>
+				   <button type="button" class="marker-generator__button">Сгенерировать</button>
+			   </div>
+<!-- 			   <div class="preview">
+			   		<div class="wrapper">
+				   		<p>тест</p>
+				   		<img src="images/find.png">
+			   		</div>
+			   </div> -->
+			   <p class="marker-generator__desc">Cгенерируй маркер и тыцни на карту.</p>
+			</form>
 		</div>
 	</div>
 

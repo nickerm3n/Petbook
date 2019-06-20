@@ -57,7 +57,7 @@ function generateMarker(markers) {
 	let preview = 
 	$(`<div class="preview">
 		<div class="wrapper">
-		<p>${input}</p>
+		<p id="marker-desc">${input}</p>
 		<img id="marker-img" src=${path}>
 		</div>
 		</div>`);
@@ -132,6 +132,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 
 function placeMarker(position, map) {
+	let textForInfo = $('#marker-desc').text();
 	let preview = $('#marker-img').attr('src');
 
 	if (preview === undefined) return;
@@ -150,12 +151,11 @@ function placeMarker(position, map) {
 	$('#marker-generator__input').val('');
 	$('.marker-generator__select').prop('selectedIndex',0);;
 
-	// google.maps.event.addListener(marker, 'click', (function(marker) {
-	// 	return function() {
-	// 		alert(infowindow)
-	// 		infowindow.setContent('test');
-	// 		infowindow.open(map, marker);
-	// 		}
-	// 	})
-	// )(marker);
+	google.maps.event.addListener(marker, 'click', (function(marker, text) {
+		return function() {
+			infowindow.setContent(text);
+			infowindow.open(map, marker);
+			}
+		})(marker, textForInfo)
+	)
 }

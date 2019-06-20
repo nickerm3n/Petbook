@@ -18,9 +18,10 @@
 	form {
 		@include pos($t:15px, $l:15px);
 		width: 30%;
-		background: $brown;
+		background: linear-gradient(to bottom, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
 		border-radius: 5px;
 		padding: 10px;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
 		
 		label {
 			color: #fff;
@@ -33,6 +34,7 @@
 			background: $cream;
 			padding: 5px;
 			width: 100%;
+			border: 2px solid $brown;
 		}
 
 		select {
@@ -42,6 +44,9 @@
 		button {
 			border-radius: 5px;
 			padding: 5px;
+			display:inline-block;
+			margin: 0 0 10px 5px;
+			background: #F0B7A1;
 		}
 
 		.preview {

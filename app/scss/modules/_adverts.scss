@@ -35,7 +35,7 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-		z-index: 99;
+		z-index: 95;
 		
 		&.tabs__links--servisec {
 			justify-content: space-around;
@@ -67,29 +67,32 @@
 	}
 
 	//scroll style
-	.tabs__adverts-wrapper::-webkit-scrollbar-track
+	.tabs__adverts::-webkit-scrollbar-track
 	{
 		-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.3);
 		border-radius: 10px;
 		background-color: $lightcream;
 	}
 
-	.tabs__adverts-wrapper::-webkit-scrollbar
+	.tabs__adverts::-webkit-scrollbar
 	{
 		width: 8px;
 		background-color: #F5F5F5;
 	}
 
-	.tabs__adverts-wrapper::-webkit-scrollbar-thumb
+	.tabs__adverts::-webkit-scrollbar-thumb
 	{
 		border-radius: 10px;
 		background-color: $brown;
+		position: relative;
 	}
 
 	.tabs__adverts {
 		display:flex;
 		flex-direction: column;
 		height: 78vh;
+		overflow-y: scroll;
+
 		
 		@media (min-width: $width-md+1px) {
 			flex-direction: row;

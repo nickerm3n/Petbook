@@ -12,14 +12,22 @@
 				toDrag('#tabs');
 			}
 
-		})
-
+		});
+		//  --- tabs ---	
 		$( "#tabs" ).tabs();
+		$("#profile-tabs").tabs();
+		// profile window function calls
+		$('.header__profile').click(showWindow);
+		$('.profile__close').click(closeWindow);
 
 		$('.tabs__link').click(function() {
 			$('.tabs__link').removeClass('active');
 			$(this).addClass('active');
-		})
+		});
+		$('.profile__tabs-link').click(function() {
+			$('.profile__tabs-link').removeClass('profile__tabs-link--active');
+			$(this).addClass('profile__tabs-link--active');
+		});
 
 		$('.close-button, .faq-button').click(()=>{
 			$('.faq').toggleClass('show');
@@ -34,7 +42,23 @@
 		$('.marker-generator__button').click(()=> {
 			generateMarker(markers);
 		})
+		//  --- modal window ---
+		function showWindow() {
+			$('.profile').removeClass('hidden');
+			$('.header__profile').children('.profile').removeClass('profile--hidden');
 
+		}
+		function closeWindow() {
+			setTimeout(function() {
+				$('.profile').addClass('profile--hidden');
+			}, 10);
+			setTimeout(function() {
+				$('.profile').addClass('hidden');
+			}, 200);
+
+
+
+		}
 	});
 })(jQuery);
 
@@ -155,7 +179,7 @@ function placeMarker(position, map) {
 		return function() {
 			infowindow.setContent(text);
 			infowindow.open(map, marker);
-			}
-		})(marker, textForInfo)
+		}
+	})(marker, textForInfo)
 	)
 }

@@ -31,7 +31,78 @@
 			<div class="header__wrapper">
 				<div class="header__profile">
 					<img src="images/profile.png" alt="profile">
+					<div class="profile profile--hidden hidden">
+						
+						<div class="profile__close-wrap">
+							<div class="profile__close">
+								x
+							</div>
+
+						</div>
+						<div class="profile__wrap">
+							<div id="profile-tabs" class="profile__tabs">
+								<ul class="profile__tabs-links">
+									<li class="profile__tabs-item"><a class="profile__tabs-link profile__tabs-link--active" href="#profile-tabs-1">Регистрация</a></li>
+									<li class="profile__tabs-item"><a class="profile__tabs-link" href="#profile-tabs-2">Вход</a></li>
+								</ul>
+								<div id="profile-tabs-1" class="profile__tabs-window">
+									<div class="profile__social-wrap">
+										<a href="#" class="profile__social-link">
+											<img class="profile__social-img" src="images/menu/facebook.png" alt="facebook">
+										</a>
+										<a href="#" class="profile__social-link">
+											<img class="profile__social-img" src="images/menu/telegram.png" alt="telegram">
+										</a>
+									</div>
+									<form action="#" class="profile__form">
+										<div class="profile__input-wrap">
+											<label for="username" class="profile__input-label">Логин</label>
+											<input class="profile__input" type="username" id="username" name="username">
+										</div>
+										<div class="profile__input-wrap">
+											<label for="email" class="profile__input-label">Эмейл</label>
+											<input class="profile__input" type="email" id="email" name="email">
+										</div>
+										<div class="profile__input-wrap">
+											<label for="password" class="profile__input-label">Пароль</label>
+											<input class="profile__input" type="password" id="password" name="password">
+										</div>
+										<div class="profile__form-button-wrap">
+										<button class="profile__form-button">Зарегистрироваться</button>
+									</div>
+									</form>
+
+
+								</div>
+								<div id="profile-tabs-2" class="profile__tabs-window">
+									<div class="profile__social-wrap">
+										<a href="#" class="profile__social-link">
+											<img class="profile__social-img" src="images/menu/facebook.png" alt="facebook">
+										</a>
+										<a href="#" class="profile__social-link">
+											<img class="profile__social-img" src="images/menu/telegram.png" alt="telegram">
+										</a>
+									</div>
+									<form action="#" class="profile__form">
+										<div class="profile__input-wrap">
+											<label for="username" class="profile__input-label">Логин</label>
+											<input class="profile__input" type="username" id="username" name="username">
+										</div>
+										<div class="profile__input-wrap">
+											<label for="password" class="profile__input-label">Пароль</label>
+											<input class="profile__input" type="password" id="password" name="password">
+										</div>
+										<div class="profile__form-button-wrap">
+											<button class="profile__form-button">Войти</button>
+										</div>
+										
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>	
 				</div>
+
 				<a href="new-ad.html" class="header__add-advert">
 					<img src="images/plus.png" alt="plus">
 				</a>
@@ -44,18 +115,8 @@
 				<li class="navigation-menu__item">
 					
 					<a href="adverts.html" class="navigation-menu__link">
-							<img class="navigation-menu__img" src="images/menu/book.png" alt="book">
-							<div class="navigation-menu__subtitle ">Объявления</div>
-					</a>
-					
-					
-				</li>
-				
-				<li class="navigation-menu__item">
-					<a href="map.html" class="navigation-menu__link">
-						
-							<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
-							<div class="navigation-menu__subtitle ">Карта</div>
+						<img class="navigation-menu__img" src="images/menu/book.png" alt="book">
+						<div class="navigation-menu__subtitle ">Объявления</div>
 					</a>
 					
 					
@@ -64,7 +125,17 @@
 				<li class="navigation-menu__item">
 					<a href="#" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/bonus.png" alt="bonus">
+						<img class="navigation-menu__img" src="images/menu/pointer.png" alt="pointer">
+						<div class="navigation-menu__subtitle ">Карта</div>
+					</a>
+					
+					
+				</li>
+				
+				<li class="navigation-menu__item">
+					<a href="#" class="navigation-menu__link">
+						
+						<img class="navigation-menu__img" src="images/menu/bonus.png" alt="bonus">
 						<div class="navigation-menu__subtitle ">Бонусы</div>
 					</a>
 					
@@ -74,7 +145,7 @@
 				<li class="navigation-menu__item">
 					<a href="servisec.html" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/home.png" alt="home">
+						<img class="navigation-menu__img" src="images/menu/home.png" alt="home">
 						<div class="navigation-menu__subtitle ">Сервисы</div>
 					</a>
 					
@@ -84,7 +155,7 @@
 				<li class="navigation-menu__item">
 					<a href="#" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/facebook.png" alt="facebook">
+						<img class="navigation-menu__img" src="images/menu/facebook.png" alt="facebook">
 						<div class="navigation-menu__subtitle ">Фейсбук</div>
 					</a>
 					
@@ -94,7 +165,7 @@
 				<li class="navigation-menu__item">
 					<a href="good-hand.html" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/hand.png" alt="hand">
+						<img class="navigation-menu__img" src="images/menu/hand.png" alt="hand">
 						<div class="navigation-menu__subtitle ">В хорошие руки</div>
 					</a>
 					
@@ -104,7 +175,7 @@
 				<li class="navigation-menu__item">
 					<a href="#" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/about.png" alt="about">
+						<img class="navigation-menu__img" src="images/menu/about.png" alt="about">
 						<div class="navigation-menu__subtitle ">О нас</div>
 					</a>
 					
@@ -114,7 +185,7 @@
 				<li class="navigation-menu__item">
 					<a href="#" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/telegram.png" alt="telegram">
+						<img class="navigation-menu__img" src="images/menu/telegram.png" alt="telegram">
 						<div class="navigation-menu__subtitle ">Телеграм</div>
 					</a>
 					
@@ -124,7 +195,7 @@
 				<li class="navigation-menu__item">
 					<a href="#" class="navigation-menu__link">
 						
-							<img class="navigation-menu__img" src="images/menu/donate.png" alt="donate">
+						<img class="navigation-menu__img" src="images/menu/donate.png" alt="donate">
 						<div class="navigation-menu__subtitle ">Пожертвования</div>
 					</a>
 					

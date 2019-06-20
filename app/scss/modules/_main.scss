@@ -159,7 +159,10 @@
 		border-radius: 50%;
 		background: linear-gradient(to right, rgba(214,148,113,1) 0%,rgba(126,64,31,1) 100%);
 		cursor: pointer;
+		position: relative;
+		z-index: 99;
 		&--main {
+			z-index: 99;
 			cursor: pointer;
 			@media (max-height: 415px) and (min-height: 315px) {
 				display: none;
@@ -184,7 +187,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		z-index: 99;
+		z-index: 98;
 		
 		&--main {
 			width: 345px;
@@ -194,7 +197,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			z-index: 99;
+			z-index: 98;
 			
 			
 			@media (min-width: $iphone6-landscape) {
